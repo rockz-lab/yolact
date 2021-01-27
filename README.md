@@ -1,3 +1,9 @@
+## Unser Fork des Yolact Projekts:
+
+Änderungen für unseren Anwendungszweck:
+- Möglichkeit, das Projekt als python package zu instaliieren. Erlaubt es, das Projekt extern zu verbinden (durch ``import``)
+- Ausführung auf CPU (zweiter branch). Dazu sind an mehreren Stellen der codebase kleine Äderungen notwendig.
+
 # **Y**ou **O**nly **L**ook **A**t **C**oefficien**T**s
 ```
     ██╗   ██╗ ██████╗ ██╗      █████╗  ██████╗████████╗
