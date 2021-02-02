@@ -4,29 +4,32 @@
 # TODO: you must additionally install nVidia drivers, eg. on Ubuntu linux 
 # `apt install nvidia-driver-440` (change the 440 for whatever version you need/have).
 #
-name: yolact-env
-#prefix: /your/custom/path/envs/yolact-env
+name: loglab-gui
 channels:
   - conda-forge
   - pytorch
   - defaults
+  - open3d-admin
 dependencies:
-  - python==3.7
+  - python==3.6.9
   - pip
   - cython 
-  - pytorch::torchvision
-  - pytorch::pytorch >=1.0.1
   - cudatoolkit
   - cudnn
-  - pytorch::cuda100
-  - matplotlib
   - git # to download COCO dataset
-  - curl # to download COCO dataset
-  - unzip # to download COCO dataset
-  - conda-forge::bash # to download COCO dataset
+#  - matplotlib
+#  - curl # to download COCO dataset
+#  - unzip # to download COCO dataset
+#  - conda-forgebash # to download COCO dataset
+  - open3d
   - pip:
+    - --find-links https://download.pytorch.org/whl/torch_stable.html
     - opencv-python 
-    - pillow <7.0 # bug PILLOW_VERSION in torchvision, must be < 7.0 until torchvision is upgraded
+    - pillow <  7.0 # bug PILLOW_VERSION in torchvision, must be  7.0 until torchvision is upgraded
     - pycocotools-windows
-    - PyQt5 # needed on KDE/Qt envs for matplotlib
+    - pyrealsense2
+    - torch==1.4.0+cpu
+    - torchvision==0.5.0+cpu
+    - PyQt5
+    - PyQt5-sip
 
